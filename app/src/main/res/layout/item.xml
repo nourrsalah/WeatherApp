@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/lay"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangle2"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/tvCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="City"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:hint="Degree"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCity" />
+
+
+    <ImageView
+        android:id="@+id/ivWeather"
+        android:layout_width="177dp"
+        android:layout_height="132dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/tvDegree"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toEndOf="@+id/tvDegree"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/ivWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDegree" />
+
+    <TextView
+        android:id="@+id/tvWind"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Wind"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/ivWind"
+        app:layout_constraintTop_toBottomOf="@+id/tvDegree" />
+
+
+    <TextView
+        android:id="@+id/tvWindNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="WIND"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/bar1"
+        app:layout_constraintTop_toBottomOf="@+id/tvDegree"
+        app:layout_constraintEnd_toStartOf="@+id/ivWeather" />
+
+    <ImageView
+        android:id="@+id/ivHumid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivWind" />
+
+    <TextView
+        android:id="@+id/tvHumid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Hum"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/ivHumid"
+        app:layout_constraintTop_toBottomOf="@+id/tvWind" />
+
+
+    <TextView
+        android:id="@+id/bar2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="|"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/tvHumid"
+        app:layout_constraintTop_toBottomOf="@+id/tvWind" />
+
+    <TextView
+        android:id="@+id/bar1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:text="|"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/tvWind"
+        app:layout_constraintTop_toBottomOf="@+id/tvDegree" />
+
+    <TextView
+        android:id="@+id/tvHumidNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="HUMIDITY"
+        android:textColor="@color/grey"
+        app:layout_constraintStart_toEndOf="@+id/bar2"
+        app:layout_constraintTop_toBottomOf="@+id/tvWind"
+        app:layout_constraintEnd_toStartOf="@+id/ivWeather" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

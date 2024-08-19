@@ -1,0 +1,59 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/launchFragment">
+
+    <fragment
+        android:id="@+id/launchFragment"
+        android:name="com.example.weatherapp.ui.fragments.LaunchFragment"
+        android:label="LaunchFragment" >
+        <action
+            android:id="@+id/action_launchFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <dialog
+        android:id="@+id/halfScreenFragment"
+        android:name="com.example.weatherapp.ui.fragments.HalfScreenFragment"
+        android:label="HalfScreenFragment" >
+        <action
+            android:id="@+id/action_halfScreenFragment_to_redirectFragment"
+            app:destination="@id/redirectFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.weatherapp.ui.fragments.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_savedFragment"
+            app:destination="@id/savedFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/savedFragment"
+        android:name="com.example.weatherapp.ui.fragments.SavedFragment"
+        android:label="SavedFragment" >
+        <argument
+            android:name="cityName"
+
+            app:argType="string"
+            />
+        <action
+            android:id="@+id/action_savedFragment_to_halfScreenFragment"
+            app:destination="@id/halfScreenFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment
+        android:id="@+id/redirectFragment"
+        android:name="com.example.weatherapp.ui.fragments.RedirectFragment"
+        android:label="RedirectFragment" />
+</navigation>

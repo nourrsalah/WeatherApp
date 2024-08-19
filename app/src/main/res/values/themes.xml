@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.WeathersApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:textColorHint">@color/white</item>
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <style name="CustomSearchView" parent="Widget.Material3.SearchView">
+        <item name="queryHint">Search for a city</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:iconifiedByDefault">false</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:textColorHint">@color/white</item>
+        <item name="android:searchIcon">@drawable/search</item>
+    </style>
+
+
+
+
+
+    <style name="Theme.WeathersApp" parent="Base.Theme.WeathersApp" />
+</resources>
